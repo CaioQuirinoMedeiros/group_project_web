@@ -23,6 +23,7 @@ class Projects extends Component {
     createProjectRequest: PropTypes.func.isRequired,
     openProjectModal: PropTypes.func.isRequired,
     closeProjectModal: PropTypes.func.isRequired,
+    deleteProjectRequest: PropTypes.func.isRequired,
     openMemberModal: PropTypes.func.isRequired,
     projects: PropTypes.shape({
       data: PropTypes.arrayOf(
@@ -74,6 +75,7 @@ class Projects extends Component {
       openProjectModal,
       closeProjectModal,
       openMemberModal,
+      deleteProjectRequest,
       members,
     } = this.props;
     const { newProject } = this.state;
@@ -93,6 +95,11 @@ class Projects extends Component {
         {projects.data.map(project => (
           <Project key={project.id}>
             <p>{project.title}</p>
+            <Can checkPermission="projects_create">
+              <Button color="danger" onClick={() => deleteProjectRequest(project.id)}>
+                delete
+              </Button>
+            </Can>
           </Project>
         ))}
 

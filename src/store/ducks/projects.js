@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { createReducer, createActions } from 'reduxsauce';
 import Immutable from 'seamless-immutable';
 
@@ -11,6 +12,8 @@ const { Types, Creators } = createActions({
   closeProjectModal: null,
   createProjectRequest: ['title'],
   createProjectSuccess: ['project'],
+  deleteProjectRequest: ['id'],
+  deleteProjectSuccess: ['id'],
 });
 
 export const ProjectsTypes = Types;
@@ -35,6 +38,8 @@ const closeModal = state => state.merge({ projectModalOpen: false });
 
 const createSuccess = (state, { project }) => state.merge({ data: [...state.data, project] });
 
+const deleteSuccess = (state, { id }) => state.merge({ data: state.data.filter(project => project.id !== id) });
+
 /**
  * Reducers to types
  */
@@ -43,4 +48,5 @@ export const reducer = createReducer(INITIAL_STATE, {
   [Types.OPEN_PROJECT_MODAL]: openModal,
   [Types.CLOSE_PROJECT_MODAL]: closeModal,
   [Types.CREATE_PROJECT_SUCCESS]: createSuccess,
+  [Types.DELETE_PROJECT_SUCCESS]: deleteSuccess,
 });

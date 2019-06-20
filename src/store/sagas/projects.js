@@ -29,3 +29,19 @@ export function* createProject({ title }) {
     );
   }
 }
+
+export function* deleteProject({ id }) {
+  try {
+    yield call(api.delete, `projects/${id}`);
+
+    yield put(ProjectsActions.deleteProjectSuccess(id));
+  } catch (err) {
+    yield put(
+      toastrActions.add({
+        type: 'error',
+        title: 'Erro na operação',
+        message: 'Houve um erro ao tentar deletar o projeto',
+      }),
+    );
+  }
+}

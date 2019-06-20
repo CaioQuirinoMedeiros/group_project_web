@@ -28,6 +28,25 @@ export const Project = styled.div`
   border-radius: 5px;
   margin: 0 0 20px;
   padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  button {
+    opacity: 0.4;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
 
   p {
     font-size: 18px;

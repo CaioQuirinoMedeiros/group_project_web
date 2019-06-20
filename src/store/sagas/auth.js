@@ -64,7 +64,7 @@ export function* signUp({ name, email, password }) {
       toastrActions.add({
         type: 'error',
         title: 'Falha no cadastro',
-        message: 'Você foi convidado para algum time?',
+        message: 'Ops! Algo deu errado ao cadastrar o usuário',
       }),
     );
   }
