@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { Container, SignForm } from '../styles';
 import Button from '../../../styles/components/button';
@@ -55,6 +56,8 @@ class SignUp extends Component {
           <Button size="big" color="default" type="submit">
             Criar
           </Button>
+
+          <Link to="/signin">Entrar</Link>
         </SignForm>
       </Container>
     );

@@ -50,6 +50,18 @@ export const SignForm = styled.form`
     }
   }
 
+  a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    color: #ccc;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
   button {
     margin-top: 20px;
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { Container, SignForm } from '../styles';
 import Button from '../../../styles/components/button';
@@ -36,7 +37,7 @@ class SignIn extends Component {
     return (
       <Container>
         <SignForm onSubmit={this.handleSubmit}>
-          <h1>Boas vindas</h1>
+          <h1>Bem-vindo</h1>
           <span>Email</span>
           <input type="email" name="email" value={email} onChange={this.handleInputChange} />
 
@@ -51,6 +52,8 @@ class SignIn extends Component {
           <Button size="big" color="default" type="submit">
             Entrar
           </Button>
+
+          <Link to="/signup">Criar conta</Link>
         </SignForm>
       </Container>
     );
