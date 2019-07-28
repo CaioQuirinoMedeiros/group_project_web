@@ -1,8 +1,14 @@
 ## Front-end web grupos de projetos
 
-Front-end em ReactJS que consome a API da aplicação de grupo de projetos, feita com AdonisJS. Nessa aplicação é possível criar grupos com outros usuários e criar projetos dentro desses grupos. É possível convidar pessoas através do email e definir cargos para membros dentro dos grupos
+https://caioquirinomedeiros.github.io/group_project_web
+
+Front-end em ReactJS que consome a API da aplicação de [grupos de projetos](https://github.com/CaioQuirinoMedeiros/group_project_api), feita com AdonisJS. Nessa aplicação é possível criar grupos com outros usuários e criar projetos dentro desses grupos. É possível convidar pessoas através do email e definir cargos para of membros do grupo.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Setup
+
+Set the API URL environment variable as demonstrated in .env.example
 
 ## Available Scripts
 
