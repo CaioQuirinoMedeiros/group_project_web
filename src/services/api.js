@@ -4,7 +4,7 @@ import axios from 'axios';
 import store from '../store';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333',
+  baseURL: process.env.REACT_APP_API_URL || 'https://group-project-api.herokuapp.com/',
 });
 
 api.interceptors.request.use((config) => {

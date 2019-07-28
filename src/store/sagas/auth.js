@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import { call, put, select } from 'redux-saga/effects';
 import { actions as toastrActions } from 'react-redux-toastr';
 import { push } from 'connected-react-router';

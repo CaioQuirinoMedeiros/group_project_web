@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import { call, put } from 'redux-saga/effects';
 
 import { actions as toastrActions } from 'react-redux-toastr';

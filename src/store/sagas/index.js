@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import { all, fork, takeLatest } from 'redux-saga/effects';
 
 import { AuthTypes } from '../ducks/auth';
