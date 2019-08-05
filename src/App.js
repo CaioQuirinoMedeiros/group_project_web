@@ -12,7 +12,7 @@ const App = () => (
     <>
       <Routes />
       <GlobalStyle />
-      <ReduxToastr transitionIn="fadeIn" transitionOut="fadeOut" timeOut={4000} />
+      <ReduxToastr transitionIn="fadeIn" transitionOut="fadeOut" timeOut={4000} closeOnToastrClick />
     </>
   </Provider>
 );
